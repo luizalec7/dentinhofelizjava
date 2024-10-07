@@ -18,9 +18,13 @@ Dentinho Feliz - Um aplicativo voltado para conscientização sobre higiene buca
 # 3.3 Instruções para rodar a aplicação
 
 Pré-requisitos:
+
     JDK 8+
+
     Maven
+
     Banco de Dados MySQL
+
     IDE (IntelliJ, Eclipse, etc.)
 
 Passos:
@@ -55,11 +59,11 @@ mvn clean install
 
 Diagrama de Classes:
 
-Inserir imagem do diagrama de classes do projeto.
+![img_1.png](img_1.png)
 
 Diagrama de Casos de Uso:
 
-Inserir imagem do diagrama de casos de uso.
+![img.png](img.png)
 
 # 3.5 Link para Vídeo
 
