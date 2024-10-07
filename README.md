@@ -61,3 +61,39 @@ Diagrama de Casos de Uso:
 
 Acesse o vídeo de apresentação da proposta tecnológica, o público-alvo e os problemas que o aplicativo Dentinho Feliz resolve através do link abaixo:
 [https://youtu.be/tC7rbQUxJx8](https://youtu.be/tC7rbQUxJx8)
+
+# 3.6 Endpoints 
+
+AlarmeController
+
+Prefixo: /api/alarmes
+
+    GET /api/alarmes:
+    Retorna a lista de todos os alarmes cadastrados.
+
+    POST /api/alarmes:
+    Cria um novo alarme.
+    Request body: JSON com os dados do AlarmeDTO.
+
+QuizController
+
+Prefixo: /api/quizzes
+
+    GET /api/quizzes:
+    Retorna a lista de todos os quizzes cadastrados.
+
+    POST /api/quizzes:
+    Cria um novo quiz.
+    Request body: JSON com os dados do QuizDTO.
+
+UsuarioController
+
+Prefixo: /api/usuarios
+
+    GET /api/usuarios:
+    Retorna a lista de todos os usuários cadastrados.
+
+    POST /api/usuarios:
+    Cria um novo usuário.
+    Request body: JSON com os dados do UsuarioDTO.
+    Validação: O corpo da requisição deve estar de acordo com a validação (@Valid).
