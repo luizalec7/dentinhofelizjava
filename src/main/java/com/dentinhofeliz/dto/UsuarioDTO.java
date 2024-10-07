@@ -1,30 +1,27 @@
 package com.dentinhofeliz.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+
+@Getter
 public class UsuarioDTO {
 
     private Long id;
+
+    @NotNull(message = "Nome é obrigatório")
     private String nome;
+
+    @NotNull(message = "Email é obrigatório")
+    @Email(message = "Email deve ser válido")
     private String email;
-
-
-    public Long getId() {
-        return id;
-    }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     public void setEmail(String email) {

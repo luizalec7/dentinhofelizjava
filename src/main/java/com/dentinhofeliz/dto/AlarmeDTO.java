@@ -1,10 +1,14 @@
 package com.dentinhofeliz.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalTime;
 
 public class AlarmeDTO {
 
     private Long id;
+
+    @JsonFormat(pattern = "HH:mm:ss")
     private LocalTime hora;
 
     public Long getId() {

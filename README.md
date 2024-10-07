@@ -27,32 +27,24 @@ Pré-requisitos:
 
     IDE (IntelliJ, Eclipse, etc.)
 
-Passos:
+`Passos:`
 
-1. Clone este repositório
-
-git clone https://github.com/luizalec7/dentinhofeliz.git
+`1. Clone este repositório: git clone https://github.com/luizalec7/dentinhofeliz.git`
 
 
-2. Navegue até a pasta do projeto:
-
-cd dentinhofeliz
+`2. Navegue até a pasta do projeto: cd dentinhofeliz`
 
 
-3. Configure o arquivo application.properties com as credenciais do seu banco de dados MySQL.
+`3. Configure o arquivo application.properties com as credenciais do seu banco de dados MySQL.`
 
 
-4. Rode o Maven para compilar o projeto:
-
-mvn clean install
+`4. Rode o Maven para compilar o projeto: mvn clean install`
 
 
-5. Execute a aplicação:
-
-    mvn spring-boot:run
+`5. Execute a aplicação: mvn spring-boot:run`
    
 
-6. Acesse a API em: http://localhost:8080
+`6. Acesse a API em: http://localhost:8080`
 
 
 # 3.4 Diagramas
@@ -68,4 +60,4 @@ Diagrama de Casos de Uso:
 # 3.5 Link para Vídeo
 
 Acesse o vídeo de apresentação da proposta tecnológica, o público-alvo e os problemas que o aplicativo Dentinho Feliz resolve através do link abaixo:
-LINK
+[https://youtu.be/tC7rbQUxJx8](https://youtu.be/tC7rbQUxJx8)

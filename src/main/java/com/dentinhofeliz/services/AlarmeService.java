@@ -2,25 +2,25 @@ package com.dentinhofeliz.services;
 
 import com.dentinhofeliz.dto.AlarmeDTO;
 import com.dentinhofeliz.entities.Alarme;
-import com.dentinhofeliz.repositories.AlarmeRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.ArrayList;
 
 @Service
 public class AlarmeService {
 
-    @Autowired
-    private AlarmeRepository alarmeRepository;
+    private List<Alarme> alarmes = new ArrayList<>();
 
     public List<Alarme> listarTodos() {
-        return alarmeRepository.findAll();
+        return alarmes;
     }
 
     public Alarme criarAlarme(AlarmeDTO alarmeDTO) {
-        Alarme alarme = new Alarme();
-        alarme.setHora(alarmeDTO.getHora());
-        return alarmeRepository.save(alarme);
+        Alarme novoAlarme = new Alarme();
+        novoAlarme.setId(alarmeDTO.getId());
+        novoAlarme.setHora(alarmeDTO.getHora());
+        alarmes.add(novoAlarme);
+        return novoAlarme;
     }
 }
