@@ -2,26 +2,32 @@ package com.dentinhofeliz.services;
 
 import com.dentinhofeliz.dto.UsuarioDTO;
 import com.dentinhofeliz.entities.Usuario;
+import com.dentinhofeliz.repositories.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
 
-    private List<Usuario> usuarios = new ArrayList<>();
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
     public List<Usuario> listarTodos() {
-        return usuarios;
+        return usuarioRepository.findAll();
     }
 
     public Usuario criarUsuario(UsuarioDTO usuarioDTO) {
         Usuario novoUsuario = new Usuario();
-        novoUsuario.setId(usuarioDTO.getId());
         novoUsuario.setNome(usuarioDTO.getNome());
         novoUsuario.setEmail(usuarioDTO.getEmail());
-        usuarios.add(novoUsuario);
-        return novoUsuario;
+        return usuarioRepository.save(novoUsuario);
+    }
+
+    public Usuario buscarPorId(Long id) {
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+        return usuario.orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
     }
 }

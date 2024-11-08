@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class QuizService {
@@ -23,5 +24,10 @@ public class QuizService {
         quiz.setPergunta(quizDTO.getPergunta());
         quiz.setRespostaCorreta(quizDTO.getRespostaCorreta());
         return quizRepository.save(quiz);
+    }
+
+    public Quiz buscarPorId(Long id) {
+        Optional<Quiz> quiz = quizRepository.findById(id);
+        return quiz.orElseThrow(() -> new RuntimeException("Quiz não encontrado"));
     }
 }
